@@ -1,0 +1,8 @@
+{$DOMAIN} {
+  handle /grafana* {
+    reverse_proxy grafana:3000
+  }
+  handle {
+    reverse_proxy homer-webapp:80
+  }
+}
